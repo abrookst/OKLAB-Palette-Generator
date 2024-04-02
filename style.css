@@ -1,0 +1,11 @@
+.header > *{
+    margin:0;
+}
+
+.options{
+    display: flex;
+}
+
+.color{
+    display: flex;
+}

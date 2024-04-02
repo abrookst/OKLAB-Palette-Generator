@@ -1,0 +1,24 @@
+<link href="./style.css" rel="stylesheet" type="text/css" media="all">
+
+<div class="header">
+    <h1 class="wavy">Color Palette Generator</h1>
+    <p>Powered by OKLAB</p>
+</div>
+
+<div class="options"><p id="numColorsOP">Number of Colors: 8</p><input type="range" min="4" max="16" value="8" step="2" class="slider" id="numColors"></div>
+<select id="mode">
+    <option value="monochrome">monochrome</option>
+    <option value="complementary">complementary</option>
+    <option value="analgous">analgous</option>
+    <option value="triadic">triadic</option>
+    <option value="tetradic">tetradic</option>
+    <option value="achromatic">achromatic</option>
+</select>
+<p>Press Space to Generate a Palette</p>
+<p id="palName"></p>
+<div id="p1"></div>
+<p id="val"></p>
+<img width="256"id="sampleimg"src="./love.jpg">
+<canvas id="sample" width="256" height="256"></canvas>
+<script src="./jquery-min.js"></script>
+<script src="./palette.js"></script>
