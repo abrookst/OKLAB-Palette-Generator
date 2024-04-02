@@ -1,0 +1,2 @@
+# OKLAB Palette Generator
+ 
