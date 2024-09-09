@@ -7,5 +7,26 @@
 }
 
 .color{
+    width:inherit;
+    text-align: center;
+    height: 200px;
+}
+
+#p1{
+    width: 1024;
+    display: flex;
+}
+
+#sampleimg{
+    width: 512px;
+    padding: 0;
+    margin: 0;
+}
+canvas{
+    padding: 0;
+    margin: 0;
+}
+
+#imageWrap{
     display: flex;
 }

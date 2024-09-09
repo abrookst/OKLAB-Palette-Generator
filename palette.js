@@ -134,15 +134,22 @@ function generatePalette(){
         }
         var colWrap = document.createElement("div")
         colWrap.classList.add("color")
+        colWrap.style.backgroundColor = "oklch("+L+" "+C+" "+H+"rad)"
         var colName = document.createElement("p")
         var curCol = document.createElement("canvas");
         curCol.id = "color"+i
-        curCol.width = "300"
-        curCol.height = "20"
+        curCol.width = "2"
+        curCol.height = "2"
         const ctx = curCol.getContext("2d", {willReadFrequently: true})
         ctx.fillStyle = "oklch("+L+" "+C+" "+H+"rad)"
         ctx.fillRect(0, 0, curCol.width, curCol.height)
         colName.innerHTML = "#"+rgbToHex(ctx.getImageData(0, 0, 1, 1).data)
+        if(L < .5){
+            colName.style.color = "#ffffff";
+        }
+        else{
+            colName.style.color = "#000000";
+        }
         
         colors.push(rgbToHex(ctx.getImageData(0, 0, 1, 1).data))
         colorsRGB.push(ctx.getImageData(0, 0, 1, 1).data)
