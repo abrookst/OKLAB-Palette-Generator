@@ -123,7 +123,6 @@ function generatePalette(){
         if(mode.value == "analgous") { offsetH *= 1/3 }
         if(mode.value == "triadic") { offsetH *= 2/3 }
         if(mode.value == "tetradic") { offsetH *= .75 }
-
         
         var L = baseL + wheelItr * changeL
         var H = baseH + offsetH
@@ -141,7 +140,7 @@ function generatePalette(){
         curCol.width = "300"
         curCol.height = "20"
         const ctx = curCol.getContext("2d", {willReadFrequently: true})
-        ctx.fillStyle = "oklch("+L+", "+C+", "+H+"rad)"
+        ctx.fillStyle = "oklch("+L+" "+C+" "+H+"rad)"
         ctx.fillRect(0, 0, curCol.width, curCol.height)
         colName.innerHTML = "#"+rgbToHex(ctx.getImageData(0, 0, 1, 1).data)
         
